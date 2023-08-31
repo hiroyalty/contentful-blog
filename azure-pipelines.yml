@@ -6,9 +6,6 @@
 trigger:
 - main
 
-pool:
- name: 'myPool'
-
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
