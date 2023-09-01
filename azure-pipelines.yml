@@ -4,10 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
-
-pool:
-  name: 'MyPool'
+  - azure-pipelines
 
 variables:
 
@@ -33,6 +30,9 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
+    - task: DownloadSecureFile@1
+      inputs:
+        secureFile: '.env'
     - task: AzureKeyVault@2
       inputs:
         azureSubscription: 'Azure subscription 1 (f8b9a421-69b9-4244-a519-053ea1de04eb)'
