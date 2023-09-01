@@ -33,6 +33,13 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
+    - task: AzureKeyVault@2
+      inputs:
+        azureSubscription: 'Azure subscription 1 (f8b9a421-69b9-4244-a519-053ea1de04eb)'
+        KeyVaultName: 'contentful-blog-keyvault'
+        SecretsFilter: '*'
+        RunAsPreJob: false
+        
     - task: NodeTool@0
       inputs:
         versionSpec: '18.x'
