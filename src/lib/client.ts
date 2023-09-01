@@ -5,13 +5,13 @@ import { endpoint } from 'codegen';
 
 const graphQlClient = new GraphQLClient(endpoint, {
   headers: {
-    Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+    Authorization: `Bearer ${process.env.CONTENTFULACCESSTOKEN}`,
   },
 });
 
 const previewGraphQlClient = new GraphQLClient(endpoint, {
   headers: {
-    Authorization: `Bearer ${process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN}`,
+    Authorization: `Bearer ${process.env.CONTENTFULPREVIEWACCESSTOKEN}`,
   },
 });
 

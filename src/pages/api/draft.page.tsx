@@ -27,7 +27,7 @@ export default async (req, res) => {
 
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
-  if (secret !== process.env.CONTENTFUL_PREVIEW_SECRET) {
+  if (secret !== process.env.CONTENTFULPREVIEWSECRET) {
     return res.status(401).json({ message: 'Invalid token' });
   }
 

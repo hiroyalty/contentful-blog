@@ -32,10 +32,10 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       {/* Tutorial: contentful-and-the-starter-template.md */}
       {/* Uncomment the line below to make the Greeting field available to render */}
       {/*<Container>*/}
-      {/*  <div className="my-5 bg-colorTextLightest p-5 text-colorBlueLightest">{page.greeting}</div>*/}
+      {/*  <div className="p-5 my-5 bg-colorTextLightest text-colorBlueLightest">{page.greeting}</div>*/}
       {/*</Container>*/}
 
-      <Container className="my-8  md:mb-10 lg:mb-16">
+      <Container className="my-8 md:mb-10 lg:mb-16">
         <h2 className="mb-4 md:mb-6">{t('landingPage.latestArticles')}</h2>
         <ArticleTileGrid className="md:grid-cols-2 lg:grid-cols-3" articles={posts} />
       </Container>
